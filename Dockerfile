@@ -8,7 +8,74 @@ ARG USERNAME=${USERNAME}
 # Bring everything up to date.
 RUN apt update; apt -y dist-upgrade
 
-# Install anything and everything we desire.
+# Download packages without installing them
+RUN apt-get -y install --download-only \
+bc \
+burpsuite \
+crackmapexec \
+curl \
+debootstrap \
+dirb \
+dirbuster \
+enum4linux \
+ethtool \
+exploitdb \
+exuberant-ctags \
+file \
+firefox-esr \
+fonts-powerline \
+freerdp2-x11 \
+ftp \
+gobuster \
+golang-go \
+gpg \
+hashcat \
+hashid \
+hydra \
+iputils-ping \
+kali-linux-large \
+man \
+metasploit-framework \
+mysql* \
+nfs-common \
+neovim \
+netcat-traditional \
+net-tools \
+nikto \
+nmap \
+nodejs \
+npm \
+openvpn \
+oscanner \
+postgresql \
+python3-pip \
+python3-venv \
+rsync \
+seclists \
+sipvicious \
+smbclient \
+smbmap \
+smtp-user-enum \
+snmp \
+socat \
+sslscan \
+sqlmap \
+squashfs-tools \
+telnet \
+tmux \
+tmuxinator \
+tnscmd10g \
+webshells \
+wfuzz \
+wget \
+whatweb \
+wireshark \
+wkhtmltopdf \
+wordlists \
+zaproxy \
+zsh
+
+# Install the downloaded packages
 RUN apt-get -y install \
 bc \
 burpsuite \
@@ -62,7 +129,6 @@ sslscan \
 sqlmap \
 squashfs-tools \
 telnet \
-tftp \
 tmux \
 tmuxinator \
 tnscmd10g \

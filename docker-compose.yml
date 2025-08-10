@@ -1,7 +1,6 @@
-version: "3.7"
-
 services:
   kali-on-macos:
+    platform: linux/amd64
     build:
       context: .
       args:
